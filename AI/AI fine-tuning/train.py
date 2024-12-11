@@ -109,8 +109,8 @@ FastLanguageModel.for_inference(model) # Enable native 2x faster inference
 inputs = tokenizer(
 [
     alpaca_prompt.format(
-        "Continue the fibonnaci sequence.", # instruction
-        "1, 1, 2, 3, 5, 8", # input
+        "Составь новый рецепт пиццы с использованием заданных ингредиентов.", # instruction
+        "Бекон, болгарский перец, фарш мясной, соус ранч.", # input
         "", # output - leave this blank for generation!
     )
 ], return_tensors = "pt").to("cuda")
@@ -123,8 +123,8 @@ FastLanguageModel.for_inference(model) # Enable native 2x faster inference
 inputs = tokenizer(
 [
     alpaca_prompt.format(
-        "Continue the fibonnaci sequence.", # instruction
-        "1, 1, 2, 3, 5, 8", # input
+        "Составь новый рецепт пиццы с использованием заданных ингредиентов.", # instruction
+        "Бекон, болгарский перец, фарш мясной, соус ранч.", # input
         "", # output - leave this blank for generation!
     )
 ], return_tensors = "pt").to("cuda")
@@ -138,8 +138,8 @@ _ = model.generate(**inputs, streamer = text_streamer, max_new_tokens = 128)
 inputs = tokenizer(
 [
     alpaca_prompt.format(
-        "What is a famous tall tower in Paris?", # instruction
-        "", # input
+        "Составь новый рецепт пиццы с использованием заданных ингредиентов.", # instruction
+        "Баклажаны, огурцы, помидоры, томатный соус.", # input
         "", # output - leave this blank for generation!
     )
 ], return_tensors = "pt").to("cuda")
