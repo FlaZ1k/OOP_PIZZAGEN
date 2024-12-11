@@ -1,0 +1,2 @@
+FROM unsloth.F16.gguf
+PARAMETER num_predict 256
